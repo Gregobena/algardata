@@ -15,11 +15,11 @@ import pandas as pd
 # --------------------------------------------------------------------------
 # CONFIGURACION: modificar segun corresponda
 # --------------------------------------------------------------------------
-RUTA_ARCHIVO = "Casos_2026-07-13T16_28_02.xlsx"
+RUTA_ARCHIVO = "raw_data/casos.xlsx"
 HOJA = "Tickets"
 
 # Archivo de Horas, necesario para calcular 'cant_tiempos' e 'id_tiempos'
-RUTA_HORAS = "Horas_13-07-2026_13-07-2026.xlsx"
+RUTA_HORAS = "raw_data/horas.xlsx"
 HOJA_HORAS = "Carga de Tiempo"
 
 # Columnas que se consideran imprescindibles para que una fila sea valida
@@ -232,10 +232,10 @@ df_casos = agregar_columnas_tiempos_casos(df_casos, RUTA_HORAS, HOJA_HORAS)
 # ---- Filtro opcional por rango de fechas (desactivado) ----
 # Para activarlo, descomentar las siguientes lineas y asignar las fechas
 # deseadas en formato dia-mes-año.
-# from datetime import datetime
-# fecha_inicio = datetime(2026, 7, 1)    # 1-7-2026
-# fecha_fin = datetime(2026, 7, 31)      # 31-7-2026
-# df_casos = filtrar_por_rango_fechas(df_casos, "Fecha de Inicio", fecha_inicio, fecha_fin)
+from datetime import datetime
+fecha_inicio = datetime(2026, 1, 1)   
+fecha_fin = datetime(2026, 5, 31)     
+df_casos = filtrar_por_rango_fechas(df_casos, "Fecha de Inicio", fecha_inicio, fecha_fin)
 
 print(df_casos.shape)
 print(df_casos.dtypes)

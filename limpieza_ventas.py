@@ -15,7 +15,7 @@ import pandas as pd
 # CONFIGURACION: modificar segun corresponda
 # --------------------------------------------------------------------------
 RUTA_ARCHIVO = "raw_data/ventas-clasificacion.xlsx"
-HOJA = "Clasificaciones"
+HOJA = "Tickets"
 
 # Columnas que se consideran imprescindibles para que una fila sea valida
 COLUMNAS_RELEVANTES_VENTAS = ["Nº de Tiempo", "Fecha de Inicio", "Origen", "Usuario"]
