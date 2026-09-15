@@ -204,8 +204,8 @@ df_ventas = agregar_columnas_tipo_ventas(df_ventas)
 # Para activarlo, descomentar las siguientes lineas y asignar las fechas
 # deseadas en formato dia-mes-año.
 from datetime import datetime
-fecha_inicio = datetime(2026, 7, 1)    # 1-7-2026
-fecha_fin = datetime(2026, 7, 31)      # 31-7-2026
+fecha_inicio = datetime(2026, 1, 1)    # 1-7-2026
+fecha_fin = datetime(2026, 5, 31)      # 31-7-2026
 df_ventas = filtrar_por_rango_fechas(df_ventas, "Fecha de Inicio", fecha_inicio, fecha_fin)
 
 print(df_ventas.shape)
